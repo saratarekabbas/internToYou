@@ -1,0 +1,282 @@
+/* Style the header */
+/** {*/
+/*    margin: 0;*/
+/*    font-family: Arial, Helvetica, sans-serif;*/
+
+/*}*/
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+.hero {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    background: #000;
+    color: #fff;
+}
+
+.hero .alpha-bg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: .50;
+}
+
+.center {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    display: table;
+    opacity: 10;
+}
+
+.content-wrap {
+    display: table-cell;
+    position: relative;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.catch-phrase {
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: Inter, sans-serif;
+    cursor: context-menu;
+}
+
+.catch-phrase span {
+    color: #ff9800;
+}
+
+.header {
+    width: 100%;
+    height: 100px;
+    top: 0;
+    margin: 0;
+    padding: 0;
+    background: rgba(0, 0, 0, .30);
+    z-index: 999;
+    position: fixed;
+}
+
+header h1 {
+    font-size: 50px;
+    color: #ff9800;
+    font-family: Arial;
+}
+article p {
+    font-size: 18px;
+    line-height: 2;
+}
+
+.header .logo {
+    float: left;
+    height: 100%;
+    font-size: 1.3em;
+    margin: 0;
+    padding: 0 0 0 2rem;
+    color: #fff;
+    cursor: context-menu;
+}
+
+.header nav {
+    float: right;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.header nav ul {
+    padding: 0 2rem 0 0;
+    margin: -.5rem 0 0 0;
+    position: relative;
+    top: 50%;
+    display: block;
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+}
+
+.header nav ul li {
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.header nav ul li a {
+    color: #fff;
+    padding: 0 1em;
+    display: inline-block;
+    line-height: inherit;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.header nav ul li a:hover,
+.header nav ul li a:active {
+    color: #ff9800;
+}
+
+/* section */
+
+section {
+    text-align: center;
+    padding: 3rem;
+}
+
+section article{
+    line-height: 1.8em;
+    max-width: 80%;
+    margin: auto;
+}
+
+
+.sticky {
+    position: fixed;
+}
+
+.sticky + .content {
+    padding-top: 102px;
+}
+
+.title {
+    padding: 15px;
+    text-align: center;
+    background: black;
+    cursor: context-menu;
+    font-family: Arial;
+}
+
+.title h1 {
+    font-size: 50px;
+    color: #ff9800;
+}
+
+.title p {
+    font-size: 30px;
+    color: white;
+}
+
+/*column cards*/
+
+/* Float three columns side by side */
+.column {
+    float: left;
+    width: 31%;
+    padding: 0 10px;
+    padding-bottom: 30px;
+}
+
+/* Remove extra left and right margins, due to padding */
+.row {
+    margin: 0 -5px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: block;
+        margin-bottom: 20px;
+    }
+}
+
+/* Style the counter cards */
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+    height: 270px;
+}
+.card h2{
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    max-width:350px ;
+    margin-left: auto;
+    margin-right: auto;
+}
+.description {
+    width: 270px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 1.5em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.view-button {
+    display: inline-block;
+    border-radius: 5px;
+    background-color: #ff9800;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px 20px;;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.view-button .span-button {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.view-button .span-button:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.view-button:hover .span-button {
+    padding-right: 25px;
+}
+
+.view-button:hover .span-button:after {
+    opacity: 1;
+    right: 0;
+}
+
+/*Job Details*/
+.job-details {
+    position: relative;
+}
+
+/*footer*/
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 7%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding-top: 20px;
+}
