@@ -26,7 +26,7 @@ Route::get('/', function () {
 
     return view('jobs', [
         //latest means display the latest at the top
-        'jobs' => Job::latest()->with('category' , 'employer')->get(),
+        'jobs' => Job::latest()->with('category', 'employer')->get(),
     ]); //returns the view of the jobs file, which redirects us to jobs.blade.php
 });
 
@@ -37,7 +37,7 @@ Route::get('job-record/{job:slug}', function (Job $job) { // {job:slug} we put s
     ]);
 });
 
-Route::get('categories/{category:slug}', function (Category $category){
+Route::get('categories/{category:slug}', function (Category $category) {
     return view(
         'jobs', [
         "jobs" => $category->jobs
@@ -45,7 +45,7 @@ Route::get('categories/{category:slug}', function (Category $category){
 });
 
 //returns all job listings written by the employer
-Route::get('employers/{employer:username}', function (User $employer){
+Route::get('employers/{employer:username}', function (User $employer) {
     return view('jobs', [
         'jobs' => $employer->jobs
     ]);
