@@ -15,7 +15,8 @@ class Job extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function user(){
-        return $this->belongsTo(User::class);
+    public function employer(){
+//        we are using user_id as the foreign key and not employer_id (which searches for it by default), that is why we specified.
+        return $this->belongsTo(User::class, 'user_id');
     }
 }
