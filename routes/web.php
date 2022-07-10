@@ -2,6 +2,7 @@
 
 use App\Models\Category;
 use App\Models\Job;
+use App\Models\User;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
 use Spatie\YamlFrontMatter\YamlFrontMatter;
