@@ -45,7 +45,7 @@ Route::get('categories/{category:slug}', function (Category $category){
 });
 
 //returns all job listings written by the employer
-Route::get('employers/{employer}', function (User $employer){
+Route::get('employers/{employer:username}', function (User $employer){
     return view('jobs', [
         'jobs' => $employer->jobs
     ]);
