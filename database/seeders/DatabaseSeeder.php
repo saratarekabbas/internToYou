@@ -22,14 +22,14 @@ class DatabaseSeeder extends Seeder
         Job::truncate();
 
         //factory created
-//       $user = User::factory(3)->create();
+       $user = User::factory(20)->create();
 
-        $user = User::create([
-            'name' => 'Sara',
-            'username' => 'saratarek',
-            'email' => 'sara@gmail.com',
-            'password' => '$2y$10$mSeqweqVBkJZd6oZeUkOuupRrIg/AmNWFSv1w6V5L/MeHiWtrcnmG'
-        ]);
+//        $user = User::create([
+//            'name' => 'Sara',
+//            'username' => 'saratarek',
+//            'email' => 'sara@gmail.com',
+//            'password' => '$2y$10$mSeqweqVBkJZd6oZeUkOuupRrIg/AmNWFSv1w6V5L/MeHiWtrcnmG'
+//        ]);
 
         //specialized creation
         $it = Category::create([
