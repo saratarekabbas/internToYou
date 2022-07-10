@@ -21,10 +21,11 @@ use Spatie\YamlFrontMatter\YamlFrontMatter;
 
 //this is the home path
 Route::get('/', function () {
-    $jobs = Job::all();
+//    $jobs = Job::all();
 
     return view('jobs', [
-        'jobs' => $jobs
+        //latest means display the latest at the top
+        'jobs' => Job::latest()->with('category')->get(),
     ]); //returns the view of the jobs file, which redirects us to jobs.blade.php
 });
 
