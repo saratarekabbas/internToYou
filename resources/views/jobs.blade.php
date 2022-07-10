@@ -56,7 +56,7 @@
     </article>
 </section>
 
-{{--MINEEEEEEEEEE--}}
+{{--Main content for the internship listings exists here--}}
 <div class="title">
     <h1 class="title">Internships</h1>
     <p>Explore positions top companies are hiring for!</p>
@@ -64,12 +64,9 @@
 
 <section>
     <div class="content">
-
-
         {{--    column cards for job listings--}}
-
         <div class="row">
-            <?php foreach ($jobs as $job) : ?>
+            @foreach($jobs as $job)
             <div class="column">
                 <div class="card">
                     <h2> {{$job->title}}</h2>
@@ -82,9 +79,8 @@
                     <a href="/job-record/{{$job->slug}}" class="view-button"><span
                             class="span-button">View</span></a>
                 </div>
-
             </div>
-            <?php endforeach;?>
+            @endforeach
         </div>
 
     </div>
