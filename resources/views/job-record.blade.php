@@ -34,7 +34,7 @@
         </div>
     </div>
 
-<a href="/categories/<?= $job->category->id; ?>"><?= $job->category->name; ?> </a>
+<a href="/categories/<?= $job->category->slug; ?>"><?= $job->category->name; ?> </a>
 
 
 

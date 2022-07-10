@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Category;
 use App\Models\Job;
 use Illuminate\Support\Facades\File;
 use Illuminate\Support\Facades\Route;
@@ -31,5 +32,12 @@ Route::get('job-record/{job:slug}', function (Job $job) { // {job:slug} we put s
     return view(
         'job-record', [
         "job" => $job
+    ]);
+});
+
+Route::get('categories/{category:slug}', function (Category $category){
+    return view(
+        'jobs', [
+        "jobs" => $category->jobs
     ]);
 });
