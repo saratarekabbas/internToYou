@@ -41,7 +41,7 @@
 <div class="job-details">
     <h1><?= $job->title; ?></h1>
     <p><?= $job->company; ?></p>
-   <p> By <a href="#">Sara</a> in <a href="/categories/<?= $job->category->slug; ?>"><?= $job->category->name?></a></p>
+   <p> By <a href="#">Sara</a> in <a href="/categories/<?= $job->category->slug; ?>"><?= $job->category->name ?></a></p>
     <p><img src="company.jpg" alt="company" width="20" height="16"><?= $job->company; ?></p>
     <p><img src="location.png" alt="location" width="16" height="16"> <?= $job->location; ?></p>
     <p><strong>$ </strong><?= $job->salary; ?></p>
