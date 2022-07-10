@@ -11,48 +11,18 @@
 </head>
 <body>
 
-<!-- Header -->
-<div class="header2">
-    <div class="logo">
-        <h1>SEEKER</h1>
-    </div>
-    <!-- you can insert mobile menu here, to make it responsive -->
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="">Listings</a></li>
-            <li><a href="">Companies</a></li>
-            <li><a href="">Contact Us</a></li>
-        </ul>
-    </nav>
-</div>
-
-    <div class="beta-bg"></div>
-        <div class="content-wrap">
-
-        </div>
-    </div>
-
-
-
-
-
 <div class="job-details">
-    <h1><?= $job->title; ?></h1>
-    <p><?= $job->company; ?></p>
-   <p> By <a href="/employers/<?= $job->employer->username ?>"> <?= $job->employer->name; ?></a> in <a href="/categories/<?= $job->category->slug; ?>"><?= $job->category->name ?></a></p>
-    <p><img src="company.jpg" alt="company" width="20" height="16"><?= $job->company; ?></p>
-    <p><img src="location.png" alt="location" width="16" height="16"> <?= $job->location; ?></p>
-    <p><strong>$ </strong><?= $job->salary; ?></p>
-    <p class="description"><?= $job->description; ?></p>
-    <?= $job->body; ?>
+    <h1>Job Title: {{ $job->title }}</h1>
+    <p>Company: {{$job->company}}</p>
+   <p> By <a href="/employers/{{$job->employer->username}}"> {{$job->employer->name}}</a> in <a href="/categories/{{$job->category->slug}}">{{$job->category->name}}</a></p>
+    <p>Company: {{$job->company}}</p>
+    <p>Location: {{$job->location}}</p>
+    <p>Salary: <strong>$ </strong> {{$job->salary}}</p>
+    <p>Description: {{$job->description}}</p>
+    <p>Body: {{$job->body}}</p>
     <br>
 </div>
 <br>
 <a href="/">Go Back</a>
-
-{{--footer--}}
-<div class="footer">Created by Sara Tarek. © 2022</div>
 </body>
 </html>
