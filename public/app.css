@@ -10,10 +10,20 @@ html, body {
     margin: 0;
 }
 
-a:link { text-decoration: none; }
-a:visited { text-decoration: none; }
-a:hover { text-decoration: none; }
-a:active { text-decoration: none; }
+a:link {
+    text-decoration: none;
+    color: #ff9800;
+}
+
+a:visited {
+    text-decoration: none;
+    color: #ff9800;
+}
+
+a:active {
+    text-decoration: none;
+    color: #ff9800;
+}
 
 .hero {
     width: 100%;
@@ -78,6 +88,7 @@ header h1 {
     color: #ff9800;
     font-family: Arial;
 }
+
 article p {
     font-size: 18px;
     line-height: 2;
@@ -137,7 +148,7 @@ section {
     padding: 3rem;
 }
 
-section article{
+section article {
     line-height: 1.8em;
     max-width: 80%;
     margin: auto;
@@ -210,14 +221,16 @@ section article{
     /*height: 270px;*/
     height: 350px;
 }
-.card h2{
+
+.card h2 {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    max-width:350px ;
+    max-width: 350px;
     margin-left: auto;
     margin-right: auto;
 }
+
 .description {
     width: 270px;
     margin-left: auto;
