@@ -202,7 +202,8 @@ section article{
     padding: 16px;
     text-align: center;
     background-color: #f1f1f1;
-    height: 270px;
+    /*height: 270px;*/
+    height: 320px;
 }
 .card h2{
     overflow: hidden;

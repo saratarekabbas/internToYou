@@ -13,3 +13,4 @@ class Category extends Model
         return $this->hasMany(Job::class); //means, one category can have many jobs
     }
 }
+
