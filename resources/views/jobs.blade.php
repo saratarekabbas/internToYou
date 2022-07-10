@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Job Seeking System</title>
+    <title>Intern To You Homepage</title>
     <link rel="stylesheet" href="/app.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
 <!-- Header -->
 <div class="header">
     <div class="logo">
-        <h1>SEEKER</h1>
+        <h1>internToYou</h1>
     </div>
     <!-- you can insert mobile menu here, to make it responsive -->
     <nav>
@@ -33,7 +33,7 @@
     <div class="alpha-bg"></div>
     <div class="center">
         <div class="content-wrap">
-            <h2 class="catch-phrase">Find the <span>right job</span> for you.</h2>
+            <h2 class="catch-phrase">Find the <span>right internship</span> for you.</h2>
         </div>
     </div>
 </div>
@@ -42,7 +42,7 @@
 <!-- random content -->
 <section>
     <header>
-        <h1>Why Seeker?</h1>
+        <h1>Why Intern To You?</h1>
     </header>
     <article>
         <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
@@ -58,7 +58,7 @@
 
 {{--MINEEEEEEEEEE--}}
 <div class="title">
-    <h1 class="title">Jobs</h1>
+    <h1 class="title">Internships</h1>
     <p>Explore positions top companies are hiring for!</p>
 </div>
 
@@ -73,7 +73,7 @@
             <div class="column">
                 <div class="card">
                     <h2><?= $job->title; ?></h2>
-                    <p><img src="category.png" alt="company" width="16" height="16"><a href="/categories/<?= $job->category->slug; ?>"><?= $job->category->name; ?> </a></p>
+                    <p><img src="category.png" alt="category" width="16" height="16"><a href="/categories/<?= $job->category->slug; ?>"><?= $job->category->name; ?> </a></p>
                     <p><img src="company.jpg" alt="company" width="20" height="16"> <?= $job->company; ?></p>
                     <p><img src="location.png" alt="location" width="16" height="16"> <?= $job->location; ?></p>
                     <p><strong>$ </strong><?= $job->salary; ?></p>
