@@ -1,14 +1,4 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Intern To You Homepage</title>
-    <link rel="stylesheet" href="/app.css">
-</head>
-<body>
+@extends('layout')
 
 <!-- Header -->
 <div class="header">
@@ -62,6 +52,7 @@
     <p>Explore positions top companies are hiring for!</p>
 </div>
 
+@section('content')
 <section>
     <div class="content">
         {{--    column cards for job listings--}}
@@ -82,12 +73,8 @@
             </div>
             @endforeach
         </div>
-
     </div>
-</section>
+    @endsection
 
 {{--footer--}}
 <div class="footer">Created by Sara Tarek. © 2022</div>
-
-</body>
-</html>
