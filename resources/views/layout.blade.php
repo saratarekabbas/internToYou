@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Intern To You</title>
     <link rel="stylesheet" href="/app.css">
+    <script src="/app.js"></script>
 </head>
 <body>
 <!-- Header -->

@@ -57,6 +57,32 @@
     @include('_jobs-header')
 
     <section>
+        {{--        DROPDOWN FOR FILTERING BY CATEGORY--}}
+        {{--        <div class="dropdown">--}}
+        {{--            <button onclick="myFunction()" class="dropbtn">Category</button>--}}
+        {{--            <div id="myDropdown" class="dropdown-content">--}}
+        {{--                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">--}}
+        {{--                <a href="#about">About</a>--}}
+        {{--                <a href="#base">Base</a>--}}
+        {{--                <a href="#blog">Blog</a>--}}
+        {{--                <a href="#contact">Contact</a>--}}
+        {{--                <a href="#custom">Custom</a>--}}
+        {{--                <a href="#support">Support</a>--}}
+        {{--                <a href="#tools">Tools</a>--}}
+        {{--            </div>--}}
+        {{--        </div>--}}
+
+        <div class="dropdown">
+            <button onclick="myFunction()" class="dropbtn">Category</button>
+            <div id="myDropdown" class="dropdown-content">
+                <input type="text" placeholder="Search.." id="myInput" onkeyup="filterFunction()">
+                @foreach($categories as $category)
+                    <a href="/categories/{{$category->slug}}">{{$category->slug}}</a>
+                @endforeach
+            </div>
+        </div>
+
+
         <div class="content">
             {{--    column cards for job listings--}}
             <div class="row">
@@ -64,7 +90,9 @@
                     <div class="column">
                         <div class="card">
                             <h2> {{$job->title}}</h2>
-                            <p>Time: <time> {{$job->created_at->diffForHumans()}}</time></p>
+                            <p>Time:
+                                <time> {{$job->created_at->diffForHumans()}}</time>
+                            </p>
                             <p>By <a href="/employers/{{$job->employer->username}}">{{$job->employer->name}}</a></p>
                             <p><img src="category.png" alt="category" width="16" height="16"><a
                                     href="/categories/{{$job->category->slug}}">{{$job->category->name}}</a></p>
