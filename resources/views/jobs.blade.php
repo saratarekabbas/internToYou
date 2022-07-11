@@ -54,11 +54,7 @@
 
 @section('content')
 
-    {{--Main content for the internship listings exists here--}}
-    <div class="title">
-        <h1 class="title">Internships</h1>
-        <p>Explore positions top companies are hiring for!</p>
-    </div>
+    @include('_jobs-header')
 
     <section>
         <div class="content">
@@ -68,6 +64,7 @@
                     <div class="column">
                         <div class="card">
                             <h2> {{$job->title}}</h2>
+                            <p>Time: <time> {{$job->created_at->diffForHumans()}}</time></p>
                             <p>By <a href="/employers/{{$job->employer->username}}">{{$job->employer->name}}</a></p>
                             <p><img src="category.png" alt="category" width="16" height="16"><a
                                     href="/categories/{{$job->category->slug}}">{{$job->category->name}}</a></p>
