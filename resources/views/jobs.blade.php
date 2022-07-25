@@ -1,4 +1,4 @@
-@extends('components.layout')
+<x-layout>
 
 {{--<!-- Header -->--}}
 {{--<div class="header">--}}
@@ -52,7 +52,6 @@
 {{--    <p>Explore positions top companies are hiring for!</p>--}}
 {{--</div>--}}
 
-@section('content')
 
     @include('_jobs-header')
 
@@ -94,7 +93,7 @@
             </div>
         </div>
     </section>
-@endsection
 
 {{--footer--}}
 {{--<div class="footer">Created by Sara Tarek. © 2022</div>--}}
+</x-layout>

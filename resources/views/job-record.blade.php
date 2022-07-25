@@ -1,6 +1,4 @@
-@extends('components.layout')
-
-@section('content')
+<x-layout>
 
     <div class="job-details">
         <h1>Job Title: {{ $job->title }}</h1>
@@ -20,4 +18,4 @@
     <br>
     <a href="/">Go Back</a>
 
-@endsection
+</x-layout>
