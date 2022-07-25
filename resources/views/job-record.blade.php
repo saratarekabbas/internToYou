@@ -1,10 +1,12 @@
-@extends('layout')
+@extends('components.layout')
 
 @section('content')
 
     <div class="job-details">
         <h1>Job Title: {{ $job->title }}</h1>
-        <p>Time: <time> {{$job->created_at->diffForHumans()}}</time></p>
+        <p>Time:
+            <time> {{$job->created_at->diffForHumans()}}</time>
+        </p>
         <p>Company: {{$job->company}}</p>
         <p> By <a href="/employers/{{$job->employer->username}}"> {{$job->employer->name}}</a> in <a
                 href="/categories/{{$job->category->slug}}">{{$job->category->name}}</a></p>
