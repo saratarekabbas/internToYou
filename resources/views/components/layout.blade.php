@@ -27,10 +27,7 @@
     </nav>
 </div>
 
-{{-- looks for @section('content')--}}
-{{--@yield('content')--}}
 {{$slot}}
-
 
 {{--footer--}}
 <div class="footer">Created by Sara Tarek. © 2022</div>
