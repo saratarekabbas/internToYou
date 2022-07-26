@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\RegisterController;
 use App\Models\Category;
 use App\Models\Job;
 use App\Models\User;
@@ -38,3 +39,6 @@ Route::get('employers/{employer:username}', function (User $employer) {
         'jobs' => $employer->jobs
     ]);
 });
+
+Route::get('register' , [RegisterController::class, 'create']);
+Route::post('register' , [RegisterController::class, 'store']);

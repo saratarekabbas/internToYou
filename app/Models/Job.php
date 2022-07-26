@@ -11,6 +11,8 @@ class Job extends Model
 
     protected $guarded = [];
 
+    protected $with = ['category' , 'employer'];
+
 // Query Scope: It extracts a part of a query from the controller and into the model to simplify queries and keep them cleaner
     public function scopeFilter($query, array $filters)
     { //accepts a query and an array of filters
