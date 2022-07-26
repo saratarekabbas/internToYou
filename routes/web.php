@@ -54,3 +54,11 @@ Route::post('logout', [SessionController::class, 'destroy'])->middleware('auth')
 Route::get('create', [JobController::class, 'create'])->middleware('auth');
 
 Route::post('create', [JobController::class, 'store'])->middleware('auth');
+
+Route::get('manage/{employer:username}', [JobController::class, 'manage'])->middleware('auth');
+
+Route::get('/jobs/{job}/edit', [JobController::class, 'edit'])->middleware('auth');
+
+Route::patch('jobs/{job}', [JobController::class, 'update'])->middleware('auth');
+
+Route::delete('jobs/{job}', [JobController::class, 'destroy'])->middleware('auth');

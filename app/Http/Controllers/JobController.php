@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Job;
+use App\Models\User;
 use Illuminate\Validation\Rule;
 
 class JobController extends Controller
@@ -52,5 +53,42 @@ class JobController extends Controller
         Job::create($attributes);
 
         return redirect('/');
+    }
+
+    public function manage(User $employer){
+        return view ('jobs.manage',[
+            'jobs' => $employer->jobs
+        ]);
+    }
+
+    public function edit(Job  $job){
+        return view ('jobs.edit',[
+            'job' => $job
+        ]);
+    }
+
+    public function update(Job $job){
+        $attributes = request()->validate([
+            'title' => 'required',
+            'slug' => ['required', Rule::unique('jobs', 'slug')->ignore($job->id)],
+            'company' => 'required',
+            'location' => 'required',
+            'salary' => 'required',
+            'description' => 'required',
+            'requirements' => 'required',
+            'benefits' => 'required',
+            'body' => 'required',
+            'category_id' => ['required', Rule::exists('categories', 'id')], //id must exist in table categories
+
+        ]);
+
+        $job->update($attributes);
+
+        return back()->with('success', 'Job updated!');
+    }
+
+    public function destroy(Job $job){
+        $job->delete();
+        return back()->with('success', 'Job deleted!');
     }
 }
