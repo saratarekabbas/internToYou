@@ -11,6 +11,14 @@ class Job extends Model
 
     protected $guarded = [];
 
+// Query Scope: It extracts a part of a query from the controller and into the model to simplify queries and keep them cleaner
+    public function scopeFilter($query, array $filters)
+    { //accepts a query and an array of filters
+        if ($filters['search'] ?? false) {
+            $query->where('title', 'like', '%' . request('search') . '%')->orWhere('body', 'like', '%' . request('search') . '%')->orWhere('company', 'like', '%' . request('search') . '%');
+        }
+    }
+
     public function category()
     {
         return $this->belongsTo(Category::class);

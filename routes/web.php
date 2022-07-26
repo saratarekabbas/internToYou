@@ -22,12 +22,7 @@ use App\Http\Controllers\JobController;
 //this is the home path
 Route::get('/', [JobController::class, 'index']);
 
-Route::get('job-record/{job:slug}', function (Job $job) { // {job:slug} we put slug to prevent it from showing in the URL job-record/1
-    return view(
-        'job-record', [
-        "job" => $job
-    ]);
-});
+Route::get('job-record/{job:slug}', [JobController::class, 'show']);
 
 Route::get('categories/{category:slug}', function (Category $category) {
     return view(
