@@ -15,30 +15,39 @@
     <div class="logo">
         <h1>internToYou</h1>
     </div>
-    <!-- you can insert mobile menu here, to make it responsive -->
+
     <nav>
         <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="/register">Register</a></li>
             <li><a href="">Listings</a></li>
-            <li><a href="">Companies</a></li>
-            <li><a href="">Contact Us</a></li>
+            @auth()
+                    <form method="POST" action="logout" id="logout-form">
+                @csrf
+                    <button class="logout-button" type="submit">Logout</button>
+                </form>
+                <?php echo '<script>alert("Welcome," {{auth()->user()->name}})</script>'; ?>
+            @else
+                <li><a href="/register">Register</a></li>
+                <li><a href="/login">Login</a></li>
+            @endauth
         </ul>
     </nav>
 </div>
 
- @auth()
-    Welcome, {{auth()->user()->name}}
-    <form method="POST" action="logout">
-        @csrf
-        <button type="submit">Logout</button>
-    </form>
-
-     @else
-     <a href="/register">Register</a>
- @endauth
 
 {{$slot}}
+
+{{--@auth()--}}
+{{--    Welcome, {{auth()->user()->name}}--}}
+{{--    <form method="POST" action="logout">--}}
+{{--        @csrf--}}
+{{--        <button type="submit">Logout</button>--}}
+{{--    </form>--}}
+
+{{--@else--}}
+{{--    <a href="/register">Register</a>--}}
+{{--    <a href="/login">Login</a>--}}
+{{--@endauth--}}
 
 {{--footer--}}
 <div class="footer">Created by Sara Tarek. © 2022</div>

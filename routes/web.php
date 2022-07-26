@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\SessionController;
 use App\Models\Category;
 use App\Models\Job;
 use App\Models\User;
@@ -42,3 +43,4 @@ Route::get('employers/{employer:username}', function (User $employer) {
 
 Route::get('register' , [RegisterController::class, 'create'])->middleware('guest');
 Route::post('register' , [RegisterController::class, 'store'])->middleware('guest');
+Route::post('logout' , [SessionController::class, 'destroy']);
