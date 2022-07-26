@@ -31,6 +31,7 @@
                             <button class="logout-button" type="submit">Logout</button>
                         </form>
                     </a></li>
+                <li class="text-user">[{{auth()->user()->name}}]</li>
             @else
                 <li><a href="/register">Register</a></li>
                 <li><a href="/login">Login</a></li>
@@ -39,7 +40,17 @@
     </nav>
 </div>
 
+
 {{$slot}}
+
+{{--@auth()--}}
+{{--    <br>--}}
+{{--    <div class="alert success">--}}
+{{--        <span class="closebtn">&times;</span>--}}
+{{--        <strong>Success!</strong> Welcome, {{auth()->user()->name}}--}}
+{{--    </div>--}}
+{{--@endauth--}}
+
 
 {{--footer--}}
 <div class="footer">Created by Sara Tarek. © 2022</div>

@@ -4,13 +4,13 @@
     <p>Explore positions top companies are hiring for!</p>
 </div>
 
-@auth()
-    <br>
-    <div class="alert success">
-        <span class="closebtn">&times;</span>
-        <strong>Success!</strong> Welcome, {{auth()->user()->name}}
-    </div>
-@endauth
+{{--@auth()--}}
+{{--    <br>--}}
+{{--    <div class="alert success">--}}
+{{--        <span class="closebtn">&times;</span>--}}
+{{--        <strong>Success!</strong> Welcome, {{auth()->user()->name}}--}}
+{{--    </div>--}}
+{{--@endauth--}}
 
 {{--dropdown--}}
 <div class="filtering-area">

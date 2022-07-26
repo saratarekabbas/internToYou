@@ -157,6 +157,18 @@ article p {
     color: #ff9800;
 }
 
+.text-user{
+    color: #ff9800;
+
+    cursor: context-menu;
+    font-size: 1em;
+    display: inline-block;
+    line-height: inherit;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+}
+
 /* section */
 
 section {
@@ -436,9 +448,6 @@ section article {
     width: 100%;
     height: 400px;
     object-fit: cover;
-    /*background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url("/job-header-image.jpeg");*/
-    /*background-image: linear-gradient(55deg, rgba(0,0,0,0.9783263647255778) 0%, rgba(113,55,27,0.3228641798516282) 43%, rgba(198,195,206,1) 100%), url("/job-header-image.jpeg");*/
-    /*background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,152,0,0.5889706224286589) 100%), url("/job-header-image.jpeg");*/
     background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.6477941518404237) 0%, rgba(255, 152, 0, 0.37888658881521353) 100%), url("/job-header-image.jpeg");
     background-size: cover;
 }
@@ -693,3 +702,4 @@ section article {
 .closebtn:hover {
     color: black;
 }
+

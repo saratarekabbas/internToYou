@@ -9,6 +9,7 @@ use Illuminate\Validation\Rule;
 
 class JobController extends Controller
 {
+    
     public function index()
     {
 //        Getting all latest jobs, as well as filtering for the job search are done in the eloquent model Job.php
