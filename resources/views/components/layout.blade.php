@@ -19,7 +19,7 @@
     <nav>
         <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="">About Us</a></li>
+            <li><a href="/register">Register</a></li>
             <li><a href="">Listings</a></li>
             <li><a href="">Companies</a></li>
             <li><a href="">Contact Us</a></li>
@@ -27,16 +27,23 @@
     </nav>
 </div>
 
+ @auth()
+    Welcome, {{auth()->user()->name}}
+    <form method="POST" action="logout">
+        @csrf
+        <button type="submit">Logout</button>
+    </form>
+
+     @else
+     <a href="/register">Register</a>
+ @endauth
+
 {{$slot}}
 
 {{--footer--}}
 <div class="footer">Created by Sara Tarek. © 2022</div>
 
-{{--ADD MESSAGE HERE--}}
-@if(session()->has('success'))
-    <div x-data="{show:true}" x-init="setTimeout(() => show = false, 4000)" x-show="show">
-        <p>{{session('success')}}</p>
-    </div>
-@endif
+<x-flash/>
+
 </body>
 </html>
