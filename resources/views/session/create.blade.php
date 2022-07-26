@@ -22,7 +22,7 @@
                 <form method="POST" action="/login" class="login">
                     @csrf
                     <div class="login__field">
-                        <input type="text" class="login__input" placeholder="Email" type="email" name="email" id="email" required>
+                        <input class="login__input" placeholder="Email" type="email" name="email" id="email" required>
                         @error('email')
                         <p class="error-message">{{$message}}</p>
                         @enderror
