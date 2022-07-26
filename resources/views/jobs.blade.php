@@ -12,7 +12,7 @@
                     @endforeach
                 </div>
                     @else
-                        <p style="text-align: center">Sorry, no results were found.</p>
+                        <p style="text-align: center">Sorry, no results were found. Please check back later.</p>
                     @endif
         </div>
     </section>
