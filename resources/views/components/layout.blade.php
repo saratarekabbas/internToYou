@@ -21,7 +21,10 @@
             <li><a href="/">Home</a></li>
             <li><a href="">Listings</a></li>
             @auth()
-{{--                <strong>Success!</strong> Welcome, {{auth()->user()->name}}--}}
+                {{--                <strong>Success!</strong> Welcome, {{auth()->user()->name}}--}}
+                <li><a href="/create">Create Listing</a></li>
+                <li><a href="/manage/{{auth()->user()->username}}">Manage</a></li>
+
                 <li><a href="">
                         <form method="POST" action="logout" id="logout-form">
                             @csrf

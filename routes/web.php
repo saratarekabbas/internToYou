@@ -51,3 +51,6 @@ Route::post('login', [SessionController::class, 'store'])->middleware('guest');
 
 Route::post('logout', [SessionController::class, 'destroy'])->middleware('auth');
 
+Route::get('create', [JobController::class, 'create'])->middleware('auth');
+
+Route::post('create', [JobController::class, 'store'])->middleware('auth');

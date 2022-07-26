@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Category;
 use App\Models\Job;
+use Illuminate\Validation\Rule;
 
 class JobController extends Controller
 {
@@ -24,5 +25,32 @@ class JobController extends Controller
             'job-record', [
             "job" => $job
         ]);
+    }
+
+    public function create()
+    {
+        return view('jobs.create');
+    }
+
+    public function store()
+    {
+        $attributes = request()->validate([
+            'title' => 'required',
+            'slug' => ['required', Rule::unique('jobs', 'slug')],
+            'company' => 'required',
+            'location' => 'required',
+            'salary' => 'required',
+            'description' => 'required',
+            'requirements' => 'required',
+            'benefits' => 'required',
+            'body' => 'required',
+            'category_id' => ['required', Rule::exists('categories', 'id')], //id must exist in table categories
+        ]);
+
+        $attributes['user_id'] = auth()->id();
+
+        Job::create($attributes);
+
+        return redirect('/');
     }
 }
