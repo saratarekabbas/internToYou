@@ -8,7 +8,9 @@
 html, body {
     height: 100%;
     margin: 0;
+    min-height: 100vh;
 }
+
 
 a:link {
     text-decoration: none;
@@ -215,8 +217,7 @@ section article {
     padding: 16px;
     text-align: center;
     background-color: #f1f1f1;
-    /*height: 270px;*/
-    height: 350px;
+    height: 400px;
 }
 
 .card h2 {
@@ -346,6 +347,8 @@ section article {
 /*END OF DROPDOWN*/
 
 
+
+
 /*footer*/
 .footer {
     left: 0;
@@ -356,4 +359,147 @@ section article {
     color: white;
     text-align: center;
     padding-top: 20px;
+}
+
+/*----------------------------------*/
+/*Job-record Close Up Page*/
+.jobrow{
+    padding-left: 20%;
+    padding-right: 20%;
+
+}
+
+.jobcolumn {
+    float: left;
+    padding: 20px;
+
+}
+/* Left column */
+.jobcolumn.side {
+    width: 60%;
+}
+/* right column */
+.jobcolumn.right {
+    width: 30%;
+}
+
+.job-details-card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.job-details-card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.job-details-container {
+    padding: 2px 16px;
+}
+
+/* Clear floats after the columns */
+.jobrow:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+        width: 100%;
+    }
+}
+
+.job-view-header{
+    position: relative;
+    bottom: 10px;
+}
+
+.job-header-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    /*background-image: linear-gradient(to bottom, rgba(245, 246, 252, 0.52), rgba(117, 19, 93, 0.73)), url("/job-header-image.jpeg");*/
+    /*background-image: linear-gradient(55deg, rgba(0,0,0,0.9783263647255778) 0%, rgba(113,55,27,0.3228641798516282) 43%, rgba(198,195,206,1) 100%), url("/job-header-image.jpeg");*/
+    /*background-image: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,152,0,0.5889706224286589) 100%), url("/job-header-image.jpeg");*/
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.6477941518404237) 0%, rgba(255,152,0,0.37888658881521353) 100%), url("/job-header-image.jpeg");
+    background-size: cover;
+}
+
+.job-card{
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+.job-title{
+    position: absolute;
+    bottom: 30px;
+    padding-bottom: 30px;
+    color: white;
+    font-size: 3em;
+    font-family: Inter, sans-serif;
+}
+
+.job-details{
+    position: absolute;
+    bottom: 5px;
+    /*padding-bottom: 7px;*/
+    color: white;
+    font-size: 1em;
+    font-family: Inter, sans-serif;
+}
+
+.job-link-color{
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em ;
+}
+
+.job-link-color:hover{
+    color: #ff8400;
+}
+
+.col-yellow{
+    color: #ff9800;
+    font-size: 1.1em ;
+}
+
+/*BACK BUTTON*/
+.back-button {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #ff9800;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 15px;
+    width: 100px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+}
+
+.back-button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.back-button span:after {
+    content: '\00AB';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    left: -20px;
+    transition: 0.5s;
+}
+
+.back-button:hover span {
+    padding-left: 10px;
+}
+
+.back-button:hover span:after {
+    opacity: 1;
+    left: 1;
 }
