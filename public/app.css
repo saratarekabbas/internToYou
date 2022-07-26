@@ -157,7 +157,7 @@ article p {
     color: #ff9800;
 }
 
-.text-user{
+.text-user {
     color: #ff9800;
 
     cursor: context-menu;
@@ -314,66 +314,6 @@ section article {
 .job-details {
     position: relative;
 }
-
-/*Dropdown*/
-.dropbtn {
-    background-color: #ff9800;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-    background-color: #ff8800;
-}
-
-#myInput {
-    box-sizing: border-box;
-    background-position: 14px 12px;
-    background-repeat: no-repeat;
-    font-size: 16px;
-    padding: 14px 20px 12px 45px;
-    border: none;
-    border-bottom: 1px solid #ddd;
-}
-
-#myInput:focus {
-    outline: 3px solid #ddd;
-}
-
-.dropdown {
-    position: absolute;
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f6f6f6;
-    min-width: 230px;
-    overflow: auto;
-    border: 1px solid #ddd;
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 5px;
-    text-decoration: none;
-    display: block;
-}
-
-.dropdown a:hover {
-    background-color: #ddd;
-}
-
-.show {
-    display: block;
-}
-
-/*END OF DROPDOWN*/
 
 
 /*footer*/
@@ -702,4 +642,109 @@ section article {
 .closebtn:hover {
     color: black;
 }
+
+/*.......................*/
+
+/*Dropdown*/
+.dropbtn {
+    background-color: #ff9800;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.searchbtn {
+    background-color: #ff9800;
+    position: absolute;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus, .searchbtn:hover, .searchbtn:focus {
+    background-color: #ff8800;
+}
+
+#myInput {
+    box-sizing: border-box;
+    background-position: 14px 12px;
+    background-repeat: no-repeat;
+    font-size: 16px;
+    padding: 18px 20px 12px 45px;
+    border: none;
+    border-bottom: 1px solid #ddd;
+}
+
+#myInput:focus {
+    outline: 3px solid #ddd;
+}
+
+.dropdown, .search {
+    padding-top: 10px;
+    padding-left: 15px;
+    position: absolute;
+    display: inline-block;
+    padding-bottom: 20px;
+}
+
+.dropdown {
+    width: 50%;
+    /*left: 0;*/
+    padding-left: 30%;
+}
+
+.search {
+    /*width: 50%;*/
+    padding-right: 30%;
+    right: 0;
+
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f6f6f6;
+    min-width: 230px;
+    overflow: auto;
+    border: 1px solid #ddd;
+    z-index: 1;
+}
+
+/* Clear floats after the columns */
+.dropdown:after, .search:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 5px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+.content-lisitng {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    height: 8%;
+    padding-top: 15px;
+}
+/*END OF DROPDOWN*/
+
+
+/*TABLES FOR FORMS*/
 

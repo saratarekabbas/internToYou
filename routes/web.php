@@ -22,7 +22,11 @@ use App\Http\Controllers\JobController;
 //Below are the routes of the application
 
 //this is the home path
-Route::get('/', [JobController::class, 'index']);
+Route::get('/', function(){
+    return view ('homepage');
+});
+
+Route::get('/listings', [JobController::class, 'index']);
 
 Route::get('job-record/{job:slug}', [JobController::class, 'show']);
 

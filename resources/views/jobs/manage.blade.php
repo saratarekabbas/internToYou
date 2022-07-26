@@ -1,4 +1,8 @@
 <x-layout>
+    <div class="title">
+        <br><br><br><br><br>
+    </div>
+
     <section>
         <h1>Manage Job!</h1>
 

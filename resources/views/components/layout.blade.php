@@ -19,7 +19,7 @@
     <nav>
         <ul>
             <li><a href="/">Home</a></li>
-            <li><a href="">Listings</a></li>
+            <li><a href="/listings">Listings</a></li>
             @auth()
                 {{--                <strong>Success!</strong> Welcome, {{auth()->user()->name}}--}}
                 <li><a href="/create">Create Listing</a></li>
@@ -40,17 +40,7 @@
     </nav>
 </div>
 
-
 {{$slot}}
-
-{{--@auth()--}}
-{{--    <br>--}}
-{{--    <div class="alert success">--}}
-{{--        <span class="closebtn">&times;</span>--}}
-{{--        <strong>Success!</strong> Welcome, {{auth()->user()->name}}--}}
-{{--    </div>--}}
-{{--@endauth--}}
-
 
 {{--footer--}}
 <div class="footer">Created by Sara Tarek. © 2022</div>
