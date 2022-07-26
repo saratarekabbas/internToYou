@@ -12,3 +12,9 @@
         @endforeach
     </div>
 </div>
+
+{{--Search--}}
+<form class="example" method="GET" action="#" style="margin:auto;max-width:300px">
+    <input type="text" placeholder="Search.." name="search" value="{{ request('search') }}">
+    <button type="submit"><i class="fa fa-search"></i></button>
+</form>
