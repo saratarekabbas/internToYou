@@ -21,11 +21,13 @@
             <li><a href="/">Home</a></li>
             <li><a href="">Listings</a></li>
             @auth()
-                    <form method="POST" action="logout" id="logout-form">
-                @csrf
-                    <button class="logout-button" type="submit">Logout</button>
-                </form>
-                <?php echo '<script>alert("Welcome," {{auth()->user()->name}})</script>'; ?>
+{{--                <strong>Success!</strong> Welcome, {{auth()->user()->name}}--}}
+                <li><a href="">
+                        <form method="POST" action="logout" id="logout-form">
+                            @csrf
+                            <button class="logout-button" type="submit">Logout</button>
+                        </form>
+                    </a></li>
             @else
                 <li><a href="/register">Register</a></li>
                 <li><a href="/login">Login</a></li>
@@ -34,25 +36,26 @@
     </nav>
 </div>
 
-
 {{$slot}}
-
-{{--@auth()--}}
-{{--    Welcome, {{auth()->user()->name}}--}}
-{{--    <form method="POST" action="logout">--}}
-{{--        @csrf--}}
-{{--        <button type="submit">Logout</button>--}}
-{{--    </form>--}}
-
-{{--@else--}}
-{{--    <a href="/register">Register</a>--}}
-{{--    <a href="/login">Login</a>--}}
-{{--@endauth--}}
 
 {{--footer--}}
 <div class="footer">Created by Sara Tarek. © 2022</div>
 
 <x-flash/>
 
+<script>
+    var close = document.getElementsByClassName("closebtn");
+    var i;
+
+    for (i = 0; i < close.length; i++) {
+        close[i].onclick = function () {
+            var div = this.parentElement;
+            div.style.opacity = "0";
+            setTimeout(function () {
+                div.style.display = "none";
+            }, 600);
+        }
+    }
+</script>
 </body>
 </html>

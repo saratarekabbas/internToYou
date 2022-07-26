@@ -1,10 +1,16 @@
-
-
 <div class="title">
     <br><br><br>
     <h1 class="title">Internships</h1>
     <p>Explore positions top companies are hiring for!</p>
 </div>
+
+@auth()
+    <br>
+    <div class="alert success">
+        <span class="closebtn">&times;</span>
+        <strong>Success!</strong> Welcome, {{auth()->user()->name}}
+    </div>
+@endauth
 
 {{--dropdown--}}
 <div class="filtering-area">
@@ -23,6 +29,5 @@
         <input type="text" placeholder="Search.." name="search" value="{{ request('search') }}">
         <button type="submit">Search</button>
     </form>
-
 
 </div>
