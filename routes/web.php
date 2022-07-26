@@ -25,7 +25,7 @@ Route::get('/', function () {
     $jobs = Job::latest();
 
     if (request('search')){
-        $jobs->where('title', 'like', '%'.request('search').'%');
+        $jobs->where('title', 'like', '%'.request('search').'%')->orWhere('body', 'like', '%'.request('search').'%')->orWhere('company', 'like', '%'.request('search').'%');
     }
 
     return view('jobs', [
