@@ -31,7 +31,7 @@
             <h2>Benefits</h2>
             <p>{{$job->benefits}}</p>
             <br>
-            <br> <a href="/" class="back-button"><span>Back</span></a>
+            <br> <a href="/listings" class="back-button"><span>Back</span></a>
         </div>
 
         <div class="jobcolumn right">
