@@ -39,13 +39,12 @@
         </ul>
     </nav>
 </div>
-
 {{$slot}}
 
 {{--footer--}}
 <div class="footer">Created by Sara Tarek. © 2022</div>
 
-<x-flash/>
+
 
 <script>
     var close = document.getElementsByClassName("closebtn");

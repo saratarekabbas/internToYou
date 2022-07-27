@@ -3,10 +3,10 @@
         <br><br><br><br><br>
     </div>
 
-    <section>
-        <h1>Manage Job!</h1>
+    <section id="job">
+        <h1>Manage Your Listings!</h1>
 
-        <table border="1">
+        <table id="listing">
             <tr>
                 <th>Job Listings</th>
                 <th>Edit Job</th>
@@ -15,18 +15,18 @@
             @foreach($jobs as $job)
                 <tr>
                     <td>
-                        <a href="/job-record/{{ $job->slug }}">
+                        <a href="/job-record/{{ $job->slug }}" class="job-listing">
                             {{ $job->title }}
                         </a>
                     </td>
                     <td>
-                        <a href="/jobs/{{ $job->id }}/edit">Edit</a>
+                        <a href="/jobs/{{ $job->id }}/edit" class="edit-btn">Edit</a>
                     </td>
                     <td>
                         <form method="POST" action="/jobs/{{$job->id }}">
                             @csrf
                             @method('DELETE')
-                            <button>
+                            <button class="delete-listing">
                                 Delete
                             </button>
                         </form>
@@ -34,6 +34,9 @@
                 </tr>
             @endforeach
         </table>
+
+        <x-flash/>
+
     </section>
 
 </x-layout>

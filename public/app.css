@@ -828,3 +828,69 @@ section article {
     margin: 5px;
     text-decoration: none;
 }
+
+/*TABLE for Manage*/
+
+#listing {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+#listing td, #listing th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#listing tr:nth-child(even){background-color: #f2f2f2;}
+
+
+#listing th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #212121;
+    color: white;
+    text-align: center;
+}
+
+.delete-listing{
+    display: inline-block;
+    border-radius: 5px;
+    background-color:red;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 17px;
+    padding: 10px 20px;;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.edit-btn{
+    display: inline-block;
+    border-radius: 5px;
+    background-color:#ff9800;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 17px;
+    padding: 10px 20px;;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    text-decoration: none;
+}
+
+.job-listing{
+    font-weight: bold;
+    text-align: left;
+    color: black;
+}
+
+#job{
+    height: 80vh;
+}
