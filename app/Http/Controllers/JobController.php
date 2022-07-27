@@ -41,7 +41,7 @@ class JobController extends Controller
             'slug' => ['required', Rule::unique('jobs', 'slug')],
             'company' => 'required',
             'location' => 'required',
-            'salary' => 'required',
+            'salary' => 'required|numeric',
             'description' => 'required',
             'requirements' => 'required',
             'benefits' => 'required',
@@ -53,7 +53,7 @@ class JobController extends Controller
 
         Job::create($attributes);
 
-        return redirect('/');
+        return redirect('/listings');
     }
 
     public function manage(User $employer){
@@ -74,7 +74,7 @@ class JobController extends Controller
             'slug' => ['required', Rule::unique('jobs', 'slug')->ignore($job->id)],
             'company' => 'required',
             'location' => 'required',
-            'salary' => 'required',
+            'salary' => 'required|numeric',
             'description' => 'required',
             'requirements' => 'required',
             'benefits' => 'required',
