@@ -1,2 +1,2 @@
 # internToYou
-Software Construction PMA
+A Laravel PHP Job Listings Website for Software Construction PMA
